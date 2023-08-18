@@ -1,0 +1,50 @@
+$font-family: 'Ubuntu', sans-serif;
+
+
+$primary: #FA7654; 
+$secondary: #5A5A5A;
+$success: #C16001;
+
+
+
+//navbar
+
+$navbar-light-color:$secondary;
+$navbar-light-hover-color:$primary;
+
+//Spacer
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 12,
+  9: $spacer * 17,
+  
+) !default;
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              $secondary;
+// scss-docs-end headings-variables
+
+$navbar-nav-link-padding-x: 0.8rem;
+$navbar-padding-y: 1rem;
+$navbar-dark-color: #fff;
+
+
+$enable-negative-margins: true;
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss'
+

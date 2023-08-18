@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Font Selection-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Prestine Escapes</title>
+  </head>
+
+  <body>
+    <!--Navigation test Start-->
+    <div class="superNav border-bottom py-2 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+            <span class="me-3 text-secondary"
+              ><strong>info@prestineescapes.co.za</strong></span
+            >
+            <span class="me-3 text-secondary"
+              ><i class="fa-solid fa-phone me-1"></i>
+              <strong>012 345 6789</strong></span
+            >
+          </div>
+          <div
+            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-lg-block centerOnMobile"
+          >
+            <span class="me-3"
+              ><i class="fa-brands fa-facebook-f text-secondary"></i>
+              <i class="fa-brands fa-instagram text-secondary"></i>
+              <i class="fa-brands fa-twitter text-secondary"></i>
+              <i class="fa-brands fa-google-plus-g text-secondary"></i>
+            </span>
+            <span class="me-3"
+              ><i class="fa-solid fa-door-closed me-1 text-secondary"></i
+              ><a class="text-secondary" href="./signup.php">Sign Up</a></span
+            >
+            <span class="me-3"
+              ><i
+                class="fa-solid fa-person-walking-dashed-line-arrow-right text-secondary me-2"
+              ></i
+              ><a href="./login.php" class="text-secondary">Login</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg sticky-top p-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./img/PE Logo.png"
+            alt=""
+            width="400"
+            class="img-fluid logoMain"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse fs-5 gap-5 text-secondary"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link mx-2 text-uppercase active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="#">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="#">eperiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="#">gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="#">contact us</a>
+            </li>
+          </ul>
+
+          <div
+            class="col-lg-1 bookStayMain bg-primary text-white ms-auto d-none d-lg-block d-md-block-d-sm-block d-xs-none"
+          >
+            <div class="text-white text-center mt-3">
+              <i class="fa-solid fa-bell-concierge fs-2"></i>
+              <p class="fs-5 text-uppercase" style="line-height: 0.9">
+                Book <br />
+                your <br />
+                stay
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-1 bookStayMobile bg-primary text-white ms-auto d-lg-none"
+          >
+            <div
+              class="d-flex-row align-middle justify-content-center text-center mt-3"
+              style="height: 3.5rem"
+            >
+              <i class="fa-solid fa-bell-concierge fs-2"></i>
+              <p class="fs-5 text-uppercase" style="line-height: 0.9">
+                Book your stay
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Navigation Test End-->
+
+    <section id="user_profile">
+      <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+          <div class="h-100">
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar-nav">
+              <li class="sidebar-header text-uppercase fw-bold">my account</li>
+
+              <li class="sidebar-item">
+                <a
+                  href="#"
+                  class="sidebar-link collapsed text-secondary"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pages"
+                  aria-expanded="false"
+                  aria-controls="pages"
+                >
+                  <i class="fa-solid fa-id-card me-2"></i>
+                  User Details
+                </a>
+                <ul
+                  id="pages"
+                  class="sidebar-dropdown list-unstyled collapse"
+                  data-bs-parent="#sidebar"
+                >
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Dashboard</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Edit Profile</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Change Password</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  href="#"
+                  class="sidebar-link collapsed text-secondary"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#dashboard"
+                  aria-expanded="false"
+                  aria-controls="dashboard"
+                >
+                  <i class="fa-solid fa-map-location-dot me-2"></i>
+                  Bookings
+                </a>
+                <ul
+                  id="dashboard"
+                  class="sidebar-dropdown list-unstyled collapse"
+                  data-bs-parent="#sidebar"
+                >
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">My Bookings</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Invoices</a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Reviews</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  href="#"
+                  class="sidebar-link collapsed text-secondary"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#auth"
+                  aria-expanded="false"
+                  aria-controls="auth"
+                >
+                  <i class="fa-regular fa-user pe-2"></i>
+                  Auth
+                </a>
+                <ul
+                  id="auth"
+                  class="sidebar-dropdown list-unstyled collapse"
+                  data-bs-parent="#sidebar"
+                >
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">Sign Out</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-header text-uppercase fw-bold">Need help</li>
+
+              <li class="sidebar-item fs-5 fw-bold text-secondary lh-1">
+                <p>
+                  <i class="fa-solid fa-phone-volume ms-4 text-secondary"></i>
+                  +12 345 6789
+                </p>
+
+                <p>
+                  <i class="fa-solid fa-envelope ms-4"></i>
+                  info@prestine.co.za
+                </p>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Main Component -->
+        <div class="main">
+          <nav class="navbar navbar-expand px-3 border-bottom">
+            <!-- Button for sidebar toggle -->
+            <button class="btn" type="button" data-bs-theme="dark">
+              <span class="navbar-toggler-icon bg-primary rounded"></span>
+            </button>
+          </nav>
+          <main class="content px-3 py-2">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col mb-3">
+                  <div class="top_profiles d-flex justify-content-between mt-3">
+                    <h4>My Profile</h4>
+                    <p class="me-4 text-secondary">Edit Profile</p>
+                  </div>
+                  <hr />
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-12 col-lg-4 lh-1 me-6">
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary">Name</p>
+                      <p
+                        class="fs-5 text_profile fw-bold text-secondary mx-auto"
+                      >
+                        Piet
+                      </p>
+                    </div>
+
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary">Surname</p>
+                      <p
+                        class="fs-5 text_profile fw-bold text-secondary mx-auto"
+                      >
+                        Pompies
+                      </p>
+                    </div>
+
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary">Email</p>
+                      <p
+                        class="fs-5 text_profile fw-bold text-secondary ms-auto"
+                      >
+                        Piet@thehotelpomp.co.za
+                      </p>
+                    </div>
+
+                    <div class="d-flex mt-3">
+                      <p class="text_profile fs-4 text-secondary">Adress</p>
+                      <p class="fs-5 text_profile fw-bold text-secondary ms-8">
+                        82 Fairview str fairlands Pretoria
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-lg-4 lh-1">
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary me-2">
+                        Gender
+                      </p>
+                      <p class="fs-5 text_profile fw-bold text-secondary ms-7">
+                        Male
+                      </p>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary">Country</p>
+                      <p class="fs-5 text_profile fw-bold text-secondary ms-7">
+                        South Africa
+                      </p>
+                    </div>
+
+                    <div class="d-flex mt-3">
+                      <p class="fs-4 text_profile text-secondary me-3">Phone</p>
+                      <p class="fs-5 text_profile fw-bold text-secondary ms-7">
+                        082 345 6789
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col mb-3">
+                  <div class="top_profiles d-flex justify-content-between mt-3">
+                    <h4>Bookings</h4>
+                    <p class="me-4 text-secondary">Edit Profile</p>
+                  </div>
+                  <hr />
+                </div>
+                <div class="row table-responsive-sm">
+                  <table class="table ms-2">
+                    <thead>
+                      <tr class="fs-5 text_profile">
+                        <th scope="col  ">Hotel Name</th>
+                        <th scope="col">Book In</th>
+                        <th scope="col">Book Out</th>
+                        <th scope="col">Pick Up</th>
+                        <th scope="col">Excursions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
