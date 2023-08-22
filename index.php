@@ -24,8 +24,10 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <!--Header-->
-<header class="header">
+<header class="mainHeader">
   <!--Hero-->
+
+
 
 </header>
 
@@ -109,24 +111,16 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
       <?php $hotelCount = 0; ?>
       <?php foreach ($allHotels as $hotel) : ?>
         <?php if ($hotelCount < 3) : ?>
-          <div class="col-12 col-sm-10 col-md-6 col-lg-4 mt-5">
+          <div class="col-sm-10 col-md-4 col-lg-4 my-5">
 
             <div class="card border-0">
               <img class="card-img img-fluid" src="./img/<?php echo $hotel->banner; ?>" alt="" />
               <div class="card-img-overlay text-white d-flex flex-column justify-content-between">
 
-                <a href="rooms.php?id=<?php echo $hotel->id; ?>" class="link-underline-opacity-0">
-                  <div type="button" class="btn btn-outline-light fw-light BTNbook ms-8 mt-7">
-                    VIEW THIS HOTEL
-                  </div>
-                </a>
-                <div>
-                  <p>From R1500/NIGHT</p>
-                  <hr class="mt-1 mb-6" />
 
 
+                <a href="rooms.php?id=<?php echo $hotel->id; ?>" class="stretched-link"></a>
 
-                </div>
               </div>
               <div class="card-footer bg-primary">
 
@@ -141,17 +135,20 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 
 
 
-      <div class="row">
+      <div class="row ">
 
         <?php $hotelCount = 0; ?>
         <?php foreach ($allHotels as $hotel) : ?>
           <?php if ($hotelCount > 2) : ?>
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-4 mb-5">
-              <div class="card border-0">
+
+
+            <div class=" col-sm-12  col-md-6 col-lg-6 mb-5 mx-auto">
+              <div class="card  border-0">
                 <div class="card-header bg-primary">
 
                   <p class="hotelCardHeading "> <?php echo $hotel->name; ?></p>
+
 
                 </div>
 
@@ -162,20 +159,11 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 
 
 
-                  <div class="">
-
-                    <p>From R1500/NIGHT</p>
-                    <hr class="mt-1 mb-1" />
 
 
-                  </div>
 
-                  <a href="rooms.php?id=<?php echo $hotel->id; ?>">
-                    <div class="d-grid">
-                      <button class="btn btn-outline-light fw-light mt-9 text-uppercase " type="button">VIEW THIS HOTEL</button>
+                  <a href="rooms.php?id=<?php echo $hotel->id; ?>" class="stretched-link"></a>
 
-                    </div>
-                  </a>
                 </div>
 
               </div>
@@ -190,56 +178,61 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 
 <section class="excursion">
   <div class="container">
-    <div class="row d-flex justify-content-between mx-auto">
+    <div class="row d-flex justify-content-between">
       <div class="headingTop">
         <h4 class="">Our Services</h4>
         <hr class="hr" width="300" />
         <h1 class="bigHeading">Excursions & Tours</h1>
       </div>
 
-      <div class="col-lg-2">
-        <img src="./img/bush/groupSafari.jpg" alt="" class="thumbnailTours" />
-      </div>
-
-      <div class="col-lg-2">
-        <img src="./img/ocean/scuba.jpg" alt="" class="thumbnailTours" />
-      </div>
-
-      <div class="col-lg-2 me-8">
-        <img src="./img/moantain/horses.jpg" alt="" class="thumbnailTours" />
-      </div>
-    </div>
-    <div class="row d-flex justify-content-between mx-auto mt-3">
-      <div class="col-lg-2">
-        <img src="./img/ocean/deepsea.jpg" alt="" class="thumbnailTours" />
-        <div class="mask" style="background-color: hsla(0, 0%, 98%, 0.2)"></div>
-      </div>
-
-      <div class="col-lg-2">
-        <img src="./img/snow/dudeski.jpg" alt="" class="thumbnailTours" />
-      </div>
-
-      <div class="col-lg-2 me-8">
-        <img src="./img/ocean/yachtcouple.jpg" alt="" class="thumbnailTours" />
-      </div>
-    </div>
-
-    <div class="row mt-3 ms-2 d-flex justify-content-between">
-      <div class="col-lg-6 text-center bg-primary">
-        <div>
-          <img src="./img/white PE Logo.png" alt="" class="logoTours mt-5" />
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 my-3">
+          <img src="./img/bush/groupSafari.jpg" alt="" class="thumbnailTours img-fluid" />
         </div>
-        <div type="button" class="btn btn-outline-light fw-light my-4">
-          READ MORE
+
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+          <img src="./img/ocean/scuba.jpg" alt="" class="thumbnailTours img-fluid" />
         </div>
-        <p class="fs-3 lh-1 text-white">
-          <strong>ENJOY SUMMER DEALS</strong> <br />
-          Up to 30% Discount!
-        </p>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+          <img src="./img/moantain/horses.jpg" alt="" class="thumbnailTours img-fluid" />
+        </div>
       </div>
-      <div class="col-lg-6 imageTour"></div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+          <img src="./img/ocean/deepsea.jpg" alt="" class="thumbnailTours img-fluid" />
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+          <img src="./img/snow/dudeski.jpg" alt="" class="thumbnailTours img-fluid" />
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-3">
+          <img src="./img/ocean/yachtcouple.jpg" alt="" class="thumbnailTours img-fluid" />
+        </div>
+      </div>
+
+
+      <div class="row d-flex mt-4 ms-1">
+        <div class="col-sm-12 col-md-6 col-lg-6 text-center bg-primary">
+          <div>
+            <img src="./img/white PE Logo.png" alt="" class="logoTours mt-5 img-fluid" />
+          </div>
+          <div type="button" class="btn btn-outline-light fw-light my-4">
+            READ MORE
+          </div>
+          <p class="fs-3 lh-1 text-white">
+            <strong>ENJOY SUMMER DEALS</strong> <br />
+            Up to 30% Discount!
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 imageTour"></div>
+      </div>
+
+
+
     </div>
-  </div>
 </section>
 
 
@@ -256,7 +249,7 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
       </div>
     </div>
   </div>
-  <div class="row mx-auto justify-content-center" style="width: 87vw;">
+  <div class="row mx-auto justify-content-center testimonialSlider">
     <div id="recipeCarousel" class="carousel slide" data-bs-ride="carouseltest">
       <div class="carousel-inner" role="listbox">
         <?php
@@ -267,27 +260,29 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
                                       echo 'active';
                                       $firstSlide = false;
                                     } ?>">
-            <div class="card mx-auto" style="width: 25rem">
-              <div class="card-body">
-                <div class="cardHeading d-flex fs-1">
-                  <i class="fa-solid fa-quote-left me-3 text-primary"></i>
-                  <h3 class="card-title mb-5 text-primary">
-                    <?php echo $review->hotel_name; ?>
-                  </h3>
-                </div>
-                <p class="card-text text-secondary">
-                  <?php echo $review->user_review; ?>
-                </p>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <div class="card mx-auto" style="width: 20rem">
+                <div class="card-body">
+                  <div class="cardHeading d-flex fs-1">
+                    <i class="fa-solid fa-quote-left me-3 text-primary"></i>
+                    <h3 class="card-title mb-5 text-primary">
+                      <?php echo $review->hotel_name; ?>
+                    </h3>
+                  </div>
+                  <p class="card-text text-secondary">
+                    <?php echo $review->user_review; ?>
+                  </p>
 
-                <div class="userDetails d-flex">
-                  <img src="https://randomuser.me/api/portraits/<?php echo $review->gender; ?>/<?php echo $review->age; ?>.jpg" alt="" class="rounded-circle me-3 mt-4" style="width: 100px" />
+                  <div class="userDetails d-flex">
+                    <img src="https://randomuser.me/api/portraits/<?php echo $review->gender; ?>/<?php echo $review->age; ?>.jpg" alt="" class="rounded-circle me-3 mt-4" style="width: 100px" />
 
-                  <div class="mt-4">
-                    <h4 class="fw-bold text-success"><?php echo $review->client_name; ?></h4>
-                    <div class="starRating text-warning">
-                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <div class="mt-4">
+                      <h4 class="fw-bold text-success"><?php echo $review->client_name; ?></h4>
+                      <div class="starRating text-warning">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      </div>
+                      <p><?php echo $review->position; ?></p>
                     </div>
-                    <p><?php echo $review->position; ?></p>
                   </div>
                 </div>
               </div>
@@ -307,9 +302,8 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 </section>
 
 
+<?php include_once './includes/footer.php'; ?>
 
-<script src="./js/bootstrap.bundle.min.js"></script>
-<script src="./js/script.js"></script>
 </body>
 
 </html>

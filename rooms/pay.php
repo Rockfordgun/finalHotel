@@ -1,6 +1,6 @@
 <?php
-include_once "../include/header.php";
-include_once "../include/config.php";
+include_once "../includes/header.php";
+require_once "../includes/config.php";
 
 if (!isset($_SERVER['HTTP_REFERER'])) {
     echo "<script>window.location.href='" . APPURL . "'</script>";
@@ -17,6 +17,7 @@ if (!isset($_SERVER['HTTP_REFERER'])) {
                 <h2 class="subheading">Pay For Your Stay</h2>
 
                 <div class="container">
+                    <p class="text-center">You dont need to run through paypal its already populated in the db. Paypal is working however login details are in the read me.</p>
                     <!-- Replace "test" with your own sandbox Business account app client ID -->
                     <script src="https://www.paypal.com/sdk/js?client-id=AU610SX2ZPQfu-tYDE5J0MTNTkz0kNsn0HPZoVumjzPMva1AndAZJIul8FP_0-SQ44hMcVnaBIrrg-SX&currency=USD"></script>
                     <!-- Set up a container element for the button -->
@@ -37,7 +38,7 @@ if (!isset($_SERVER['HTTP_REFERER'])) {
                             onApprove: (data, actions) => {
                                 return actions.order.capture().then(function(orderData) {
 
-                                    window.location.href = 'http://localhost/NewHotel';
+                                    window.location.href = '<?php echo APPURL; ?>';
                                 });
                             }
                         }).render('#paypal-button-container');
@@ -56,5 +57,5 @@ if (!isset($_SERVER['HTTP_REFERER'])) {
 
 
 <?php
-include_once "../include/footer.php";
+include_once "../includes/footer.php";
 ?>

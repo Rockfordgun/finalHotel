@@ -33,3 +33,20 @@ items.forEach((el) => {
     next = next.nextElementSibling;
   }
 });
+
+$(document).ready(function () {
+  $(".datepicker").datepicker();
+});
+
+$(".appointment_date-check-in").datepicker({
+  format: "m/d/yyyy",
+  autoclose: true,
+});
+$(".appointment_date-check-out").datepicker({
+  format: "m/d/yyyy",
+  autoclose: true,
+});
+
+$(".appointment_time").timepicker();
+
+const carousel = new bootstrap.Carousel("#myCarousel");

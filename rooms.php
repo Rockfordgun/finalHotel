@@ -49,10 +49,10 @@ if (isset($_GET['id'])) {
 
 
         <?php foreach ($getAllRooms as $room) : ?>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-4">
                 <div class=" d-md-flex ">
 
-                    <img src="./<?php echo $room->img; ?>" class="img-fluid rounded-2 hotelCardImg ">
+                    <img src="./<?php echo $room->image; ?>" class="img-fluid rounded-2 hotelCardImg ">
 
                     <div class="s half left-arrow d-flex align-items-center">
                         <div class="text p-xl-5 text-center mx-auto">

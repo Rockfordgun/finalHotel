@@ -20,11 +20,16 @@ define("APPURL", "http://localhost/finalHotel");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/fontawesome.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo APPURL; ?>/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="<?php echo APPURL; ?>/css/bootstrap.css" />
 
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="<?php echo APPURL; ?>/css/bootstrap.css" />
+    <script src="<?php echo APPURL; ?>/js/bootstrap-datepicker.min.js"></script>
+
+
 
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/style.css?v=<?php echo time(); ?>">
 
@@ -36,7 +41,7 @@ define("APPURL", "http://localhost/finalHotel");
 
     <nav class="navbar navbar-expand-lg sticky-top p-3 shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./img/PE Logo.png" alt="" width="400" class="img-fluid logoMain" /></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo APPURL; ?>/img/PE Logo.png" alt="" width="400" class="img-fluid logoMain" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,20 +49,12 @@ define("APPURL", "http://localhost/finalHotel");
             <div class="collapse navbar-collapse fs-5 gap-5 text-secondary" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="<?php echo APPURL; ?>/index.php">Home</a>
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="#">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="#">eperiences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="#">gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="#">contact us</a>
+                        <a class="nav-link mx-2 text-uppercase" href="<?php echo APPURL; ?>/contactus.php">contact us</a>
                     </li>
 
                     <?php if (!isset($_SESSION['username'])) : ?>

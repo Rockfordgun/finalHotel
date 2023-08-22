@@ -39,3 +39,23 @@ VALUES
     (14, 'Skyline Penthouse', 'skyline.jpg', 4, '120 sqm', 'Panoramic cityscape view', 3, 4, 'Panorama Heights Hotel', 'Available', 450.00, 'Experience luxury living in a cityscape oasis...', 'Yes', 21, 'Yes', '5 km from the airport', 2, 2, 'Private butler, Spa treatments', 'Premium minibar items', 'Private rooftop terrace'),
     (15, 'Snowfall Suite', 'snowfall.jpg', 4, '95 sqm', 'Spectacular snowy panorama', 2, 5, 'Snowfall Lodge', 'Available', 380.00, 'Indulge in spacious comfort amidst snow-covered landscapes...', 'Yes', 20, 'Yes', '15 km from the airport', 2, 2, 'Ski rental, Gourmet dining', 'Spa treatments', 'Snowmobile experience');
 
+INSERT INTO `carousel` (`id`, `room_id`, `room_name`, `image`) 
+VALUES 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/Arialview.jpg'), 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/bedroom1.jpg'), 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/doublebedroom.jpg'), 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/ladywalking.jpg'), 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/poolarea.jpg'), 
+(NULL, '4', 'Mountain View', '/img/moantain/mountainvvview/toplounge.jpg'),
+(NULL, '9', 'The Rock', '/img/moantain/therock/bathroom.jpg'), 
+(NULL, '9', 'The Rock', '/img/moantain/therock/bathroom.jpg'), 
+(NULL, '9', 'The Rock', '/img/moantain/therock/bed1.jpg'), 
+(NULL, '9', 'The Rock', '/img/moantain/therock/bed2.jpg'), 
+(NULL, '9', 'The Rock', '/img/moantain/therock/kitchenarea.jpg'), 
+(NULL, '9', 'The Rock', '/img/moantain/therock/swimmingpool.jpg'),
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/bedview.jpg'), 
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/kavishbathroom.jpg'),
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/lavishbed.jpg'), 
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/lavishbed1.jpg'), 
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/lavishfire.jpg'), 
+(NULL, '14', 'The Mountaineer', '/img/moantain/mountaineer/lavishlounge.jpg');

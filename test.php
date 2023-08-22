@@ -1,53 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Bootstrap Datepicker</title>
-    <link rel="stylesheet" href="assets/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>Leave a Review</title>
 </head>
 
-
 <body>
+    <h1>Leave a Review</h1>
+    <form method="post" action="./includes/process_review.php" enctype="multipart/form-data">
+        <label for="hotelName">Select Hotel:</label>
+        <select id="hotelName" name="hotelName" required>
+            <option value="Ocean Oasis Resort">Ocean Oasis Resort</option>
+            <option value="Mountain Lodge">Mountain Lodge</option>
+            <!-- Add more hotel options as needed -->
+        </select><br><br>
 
-    <div class="NinjaCont">
-        <h1>CodingNinjas</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="input-group date" id="datepicker">
-                    <input type="text" class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar" style="cursor: pointer;"></span>
-                    </span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text">Pick a date fellow Ninja!</div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRH_HN5yt91p9oa385FIF2j2qkpUpec5V6zYal_oNuqsAaHyt6P4ZIoCKtP_4FvWC6gI&usqp=CAU" alt="" />
-            </div>
-        </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <label for="clientName">Your Name:</label>
+        <input type="text" id="clientName" name="clientName" required><br><br>
 
-    <script>
-        $(document).ready(function() {
-            $('#datepicker').datepicker({
-                format: 'dd-mm-yyyy',
-                autoclose: true,
-                todayHighlight: true,
-                startDate: '01-01-2023',
-                endDate: '01-01-2024'
-            });
-        });
-    </script>
+        <label for="clientPosition">Your Occupation:</label>
+        <input type="text" id="clientPosition" name="clientPosition"><br><br>
 
+        <label for="starRating">Star Rating:</label>
+        <select id="starRating" name="starRating">
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+        </select><br><br>
+
+        <label for="userReview">Your Review:</label><br>
+        <textarea id="userReview" name="userReview" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="userImage">Upload Photo (optional):</label>
+        <input type="file" id="userImage" name="userImage"><br><br>
+
+        <input type="submit" name="submit" value="Submit Review">
+    </form>
 </body>
 
 </html>
