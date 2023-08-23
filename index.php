@@ -261,7 +261,7 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
                                       $firstSlide = false;
                                     } ?>">
             <div class="col-sm-12 col-md-6 col-lg-3">
-              <div class="card mx-auto" style="width: 20rem">
+              <div class="card mx-auto gap-2" style="width: 22rem">
                 <div class="card-body">
                   <div class="cardHeading d-flex fs-1">
                     <i class="fa-solid fa-quote-left me-3 text-primary"></i>
@@ -274,7 +274,7 @@ $allreviews = $reviews->fetchAll(PDO::FETCH_OBJ);
                   </p>
 
                   <div class="userDetails d-flex">
-                    <img src="https://randomuser.me/api/portraits/<?php echo $review->gender; ?>/<?php echo $review->age; ?>.jpg" alt="" class="rounded-circle me-3 mt-4" style="width: 100px" />
+                    <img src=" <?php echo APPURL; ?>/reviews/review_images/<?php echo $review->image; ?>" alt="" class="rounded-circle me-3 mt-4" style="width: 100px" />
 
                     <div class="mt-4">
                       <h4 class="fw-bold text-success"><?php echo $review->client_name; ?></h4>

@@ -1,8 +1,8 @@
 <?php
 
 
-include_once './includes/header.php';
-include_once './includes/config.php';
+include_once '../includes/header.php';
+include_once '../includes/config.php';
 
 
 if (isset($_GET['id'])) {
@@ -22,6 +22,10 @@ if (isset($_GET['id'])) {
     $utilities->execute();
 
     $allUtilities = $utilities->fetchAll(PDO::FETCH_OBJ);
+
+    $hotels = $pdo->query("SELECT * FROM hotels");
+    $hotels->execute();
+    $allHotels = $hotels->fetchAll(PDO::FETCH_OBJ);
 }
 
 
@@ -105,13 +109,10 @@ function getRoomAttributes($pdo, $roomName)
 
 
 
-
-
-
+$starIcon = '<i class="fa-solid fa-star text-warning"></i>';
 ?>
 
-<header class="mainHeader" style="background: url(./img/mainBanner.jpg); height:500px;  background-position: center;
-    background-size: cover;">
+<header class="header" style="background-image: url(<?php echo APPURL; ?>/<?php echo $singleHotel->image; ?>);">
     <!--Hero-->
 
     <div class="container ">
@@ -150,6 +151,7 @@ function getRoomAttributes($pdo, $roomName)
 </header>
 
 
+
 <div class="container">
     <div class="row">
         <div class="col-md-9 col-lg-7 me-5 mb-5">
@@ -166,7 +168,7 @@ function getRoomAttributes($pdo, $roomName)
                     </li>
 
                     <li class="nav-item"></li>
-                    <a href="<?php echo APPURL; ?>/reviews/show-reviews.php?id=<?php echo $singleRoom->id; ?>" class="singleRoomNav">Reviews</a>
+                    <a href="<?php echo APPURL; ?>/reviews.php?id=<?php echo $singleRoom->id; ?>" class="singleRoomNav">Reviews</a>
                     </li>
 
 
@@ -177,119 +179,77 @@ function getRoomAttributes($pdo, $roomName)
 
             <hr>
             <div class="headingTop ">
-                <h4 class="mt-5 ">We Have Compared The Following Hotels For You</h4>
-                <hr class="hr" width="300" />
+
+
+                <h1>Room Reviews</h1>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <form method="POST" action="<?php echo APPURL; ?>/reviews/create-reviews.php" enctype="multipart/form-data">
+                                        <!-- Email input -->
+
+                                        <select name="hotel_id" class="form-control">
+                                            <option value="">Choose Hotel Name</option>
+                                            <?php foreach ($allHotels as $hotel) : ?>
+                                                <option value="<?php echo $hotel->id; ?>"><?php echo $hotel->name; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+
+                                        <div class="form-outline mt-4">
+                                            <input type="file" name="image" id="form2Example1" class="form-control" />
+                                            <img src="./review_images/" alt="" srcset="">
+                                        </div>
+
+                                        <div class="form-outline mb-4 ">
+                                            <input type="text" name="client_name" id="form2Example1" class="form-control" placeholder="Enter Your Name" />
+
+                                        </div>
+
+                                        <div class="form-outline mb-4 mt-4">
+                                            <input type="text" name="position" id="form2Example1" class="form-control" placeholder="What Is Your Occupation" />
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <textarea class="form-control" id="textarea" name="user_review" rows="3" placeholder="Please Leave Your Review"></textarea>
+                                        </div>
+                                        <div class="form-outline mb-4 mt-4 ms-2">
+                                            <div class="rating">
+                                                <input type="radio" name="star_rating" value="5" id="5"><label for="5">☆</label>
+                                                <input type="radio" name="star_rating" value="4" id="4"><label for="4">☆</label>
+                                                <input type="radio" name="star_rating" value="3" id="3"><label for="3">☆</label>
+                                                <input type="radio" name="star_rating" value="2" id="2"><label for="2">☆</label>
+                                                <input type="radio" name="star_rating" value="1" id="1"><label for="1">☆</label>
+                                            </div>
+
+                                        </div>
+
+
+                                        <br>
+                                        <div class="d-grid">
+                                            <!-- Submit button -->
+                                            <button type="submit" name="submit" class="btn btn-primary text-white text-uppercase mb-4 text-center">Submit Your Review</button>
+
+                                        </div>
+                                    </form>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
-            <table class="table">
-
-                <?php
-                if (isset($_POST['compare'])) {
-                    $roomName1 = $_POST['room1'];
-                    $roomName2 = $_POST['room2'];
-
-                    $room1Attributes = getRoomAttributes($pdo, $roomName1);
-                    $room2Attributes = getRoomAttributes($pdo, $roomName2);
-
-                    echo "
-                <thead>
-                <tr>
-                    <th>Hotel Attributes</th>
-                    <th>$roomName1</th>
-                    <th>$roomName2</th>
-                </tr>
-                </thead>";
-
-
-
-
-                    echo "
-                <tbody>
-                <tr>
-                <td>Number of Persons</td>
-                <td>{$room1Attributes['num_persons']}</td>
-                <td>{$room2Attributes['num_persons']}</td>
-                </tr>";
-
-                    echo "<tr>
-                <td>View</td>
-                <td>{$room1Attributes['view']}</td>
-                <td>{$room2Attributes['view']}</td>
-                </tr>";
-
-                    echo "<tr><td>Number of Beds</td>
-                <td>{$room1Attributes['num_beds']}</td>
-                <td>{$room2Attributes['num_beds']}</td>
-                </tr>";
-
-                    echo "<tr><td>WiFi</td>
-                <td>" . ($room1Attributes['wifi'] ? 'Yes' : 'No') . "</td>
-                <td>" . ($room2Attributes['wifi'] ? 'Yes' : 'No') . "</td>
-                </tr>";
-
-                    echo "<tr><td>Price</td>
-                <td>{$room1Attributes['price']}</td>
-                <td>{$room2Attributes['price']}</td>
-                </tr>";
-
-                    echo "<tr><td>Airport Pickups</td>
-                <td>" . ($room1Attributes['pickups'] ? 'Yes' : 'No') . "</td>
-                <td>" . ($room2Attributes['pickups'] ? 'Yes' : 'No') . "</td>
-                </tr>";
-                }
-                ?>
-                </tbody>
-            </table>
 
 
 
         </div>
         <div class="col-md-4 col-lg-4 mt-3">
-            <section>
-                <div>
-                    <form method="post">
-                        <label for="hotel" class="fw-bold fs-6 text-secondary">Select Hotel:</label>
-                        <select name="hotel" id="hotel" class="hotelCompare" onchange="this.form.submit()">
-                            <option value="0">Select your hotel</option>
-                            <option value="1">Ocean Oasis Resort</option>
-                            <option value="2">Serene Valley Retreat</option>
-                            <option value="3">Wilderness Haven Lodge</option>
-                            <option value="4">Snowfall Lodge</option>
-                            <option value="5">Panorama Heights</option>
-                        </select>
-                        <br>
-                        <label for="room1" class="fw-bold fs-6 text-secondary">Select Room 1:</label>
-                        <select name="room1" id="room1" class="room1Compare">
-                            <?php
-                            $selectedHotelId = $_POST['hotel'] ?? 0; // Default to Ocean Oasis Resort
-                            $rooms = getRoomsByHotel($pdo, $selectedHotelId);
-                            foreach ($rooms as $room) {
-                                echo "<option value='{$room['name']}'>{$room['name']}</option>";
-                            }
-                            ?>
-                        </select>
-                        <br>
-                        <label for="room2" class="fw-bold fs-6 text-secondary">Select Room 2:</label>
-                        <select name="room2" id="room2" class="room2Compare">
-                            <?php
-                            // Use the same $rooms array here to populate room options
-                            foreach ($rooms as $room) {
-                                echo "<option value='{$room['name']}'>{$room['name']}</option>";
-                            }
-                            ?>
-                        </select>
-                        <br>
-
-                        <div class="d-grid mt-3">
-                            <button class="btn btn-secondary btn-lg text-uppercase text-white" type="submit" name="compare" value="Compare">Compare Hotels</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-
-
-
 
 
 
@@ -328,6 +288,6 @@ function getRoomAttributes($pdo, $roomName)
 
 
 <?php
-include_once './includes/footer.php';
+include_once '../includes/footer.php';
 
 ?>

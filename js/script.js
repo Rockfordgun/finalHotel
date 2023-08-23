@@ -50,3 +50,8 @@ $(".appointment_date-check-out").datepicker({
 $(".appointment_time").timepicker();
 
 const carousel = new bootstrap.Carousel("#myCarousel");
+
+// Rating Initialization
+$(document).ready(function () {
+  $("#rateMe1").mdbRate();
+});

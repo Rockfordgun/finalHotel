@@ -116,7 +116,7 @@ ob_end_flush();
 
           </form>
 
-          <?php var_dump($_POST) ?>
+
 
         </div>
       </div>

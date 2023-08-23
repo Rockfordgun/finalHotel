@@ -142,7 +142,7 @@ if (isset($_POST['submit'])) {
                     </li>
 
                     <li class="nav-item"></li>
-                    <a href="<?php echo APPURL; ?>/reviews.php?id=<?php echo $singleRoom->id; ?>" class="singleRoomNav">Reviews</a>
+                    <a href="<?php echo APPURL; ?>/reviews/show-reviews.php?id=<?php echo $singleRoom->id; ?>" class="singleRoomNav">Reviews</a>
                     </li>
 
 
@@ -304,7 +304,7 @@ if (isset($_POST['submit'])) {
                     <ul class="list-unstyled">
                         <li><i class="fa-solid fa-user me-3"></i> Max People: <?php echo $singleRoom->num_persons; ?></li>
                         <li><i class="fa-solid fa-eye me-3"></i>View: <?php echo $singleRoom->view; ?></li>
-                        <li><i class="fa-solid fa-van-shuttle me-3"></i>Pickup: <?php echo $singleRoom->view; ?> </li>
+                        <li><i class="fa-solid fa-van-shuttle me-3"></i>Pickup: <?php echo $singleRoom->pickups; ?> </li>
                         <li><i class="fa-solid fa-maximize me-3"></i>Room Size: <?php echo $singleRoom->size; ?></li>
 
                     </ul>

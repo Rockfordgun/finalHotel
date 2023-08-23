@@ -88,6 +88,6 @@ if (isset($_GET['id'])) {
 
 
     </div>
+</div>
 
-
-    <?php include_once './includes/footer.php'; ?>
+<?php include_once './includes/footer.php'; ?>

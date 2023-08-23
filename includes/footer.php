@@ -11,11 +11,11 @@
                 <hr class="text-white">
 
                 <ul class="list-unstyled">
-                    <li><a href="#" class="py-1 text-white fs-5 fw-light">The Coast </a></li>
-                    <li><a href="#" class="py-1 text-white fs-5 fw-light">Inland </a></li>
-                    <li><a href="#" class="py-1 text-white fs-5 fw-light">The Bush </a></li>
-                    <li><a href="#" class="py-1 text-white fs-5 fw-light">Moantains </a></li>
-                    <li><a href="#" class="py-1 text-white fs-5 fw-light">Snow </a></li>
+                    <li><a href="<?php echo APPURL; ?>/rooms.php?id=1" class="py-1 text-white fs-5 fw-light">The Coast </a></li>
+                    <li><a href="<?php echo APPURL; ?>/rooms.php?id=2" class="py-1 text-white fs-5 fw-light">Inland </a></li>
+                    <li><a href="<?php echo APPURL; ?>/rooms.php?id=3" class="py-1 text-white fs-5 fw-light">The Bush </a></li>
+                    <li><a href="<?php echo APPURL; ?>/rooms.php?id=4" class="py-1 text-white fs-5 fw-light">Moantains </a></li>
+                    <li><a href="<?php echo APPURL; ?>/rooms.php?id=5" class="py-1 text-white fs-5 fw-light">Snow </a></li>
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4  text-center">
