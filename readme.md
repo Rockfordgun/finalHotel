@@ -11,7 +11,7 @@ Welcome to the **Hotel Booking System**, a web application that facilitates hote
 
 ## PayPal Integration
 
-We have integrated **PayPal** for secure payment processing.
+I have integrated **PayPal** for secure payment processing.
 
 ### PayPal Sandbox
 
@@ -38,4 +38,10 @@ Admin Credentials:
 
 ## Features
 
-...
+- when logged in you have the capbilities to have a look at the number of hotels, rooms,admins,bookings and users
+- as a admin you can create a new admin user and password.
+- user details can be updated or a user can be deleted.
+- all hotels can be viewed, can change the status of the hotel to remove it from the site, the hotel can allso be updated or removed.
+- you can also add or create a new hotel.
+- Rooms are the same as the hotels.
+- Bookings can be viewed, the status for the client can also be changed here to confirm the booking or to cancel a booking.
