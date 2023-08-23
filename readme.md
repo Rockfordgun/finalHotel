@@ -20,7 +20,7 @@ We have integrated **PayPal** for secure payment processing.
 ### PayPal Business Account (Admin)
 
 - Username: sb-757as26632344@business.example.com
-- Password: **i=AEMy[3**
+- Password: i=AEMy[3
 
 ### PayPal Personal Account (Client)
 
