@@ -65,6 +65,7 @@ if (isset($_GET['id'])) {
 
 
                             <td><a href="delete-booking.php?id=<?php echo $booking->id; ?>" class="btn btn-danger  text-center ">Cancel Booking </a></td>
+                            <td><a href="generate-invoice.php?id=<?php echo $booking->id; ?>" class="btn btn-primary text-white">Download Invoice</a></td>
                         <?php endforeach; ?>
                         </tr>
 

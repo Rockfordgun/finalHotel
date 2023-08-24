@@ -486,9 +486,14 @@ background-size: cover;
 .footer-heading{
   font-family: 'Lora', serif;
   font-size: 2rem;
-  color: var(--clr-white);
+  
 }
 
+.invoiceHeading{
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: var(--clr-white);
+}
 /* Responsive */
 
 @media (min-width:768px) {

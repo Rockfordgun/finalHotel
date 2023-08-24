@@ -76,7 +76,7 @@ $allUsers = $users->fetch(PDO::FETCH_OBJ);
         <div class="card-body">
           <h5 class="card-title">Bookings</h5>
 
-          <p class="card-text">number of admins: <?php echo $allBookings->count_bookings; ?></p>
+          <p class="card-text">number of Bookings: <?php echo $allBookings->count_bookings; ?></p>
 
         </div>
       </div>

@@ -19,7 +19,7 @@
                 </ul>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4  text-center">
-                <h2 class="footer-heading">Our Tours</h2>
+                <h2 class="footer-heading text-white">Our Tours</h2>
                 <hr class="text-white">
                 <div class="tagcloud">
                     <button type="button" class="btn btn-outline-light mt-2 text-uppercase btn-sm">Kite Surfing</button>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-md-0 mb-4 text-center ">
-                <h2 class="footer-heading">Contact Us</h2>
+                <h2 class="footer-heading text-white">Contact Us</h2>
                 <hr class="text-white">
                 <form action="#" class="subscribe-form">
                     <div class="col mt-3 ">

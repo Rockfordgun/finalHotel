@@ -422,6 +422,11 @@ a.sidebar-link {
 .footer-heading {
   font-family: "Lora", serif;
   font-size: 2rem;
+}
+
+.invoiceHeading {
+  font-family: "Lora", serif;
+  font-size: 2rem;
   color: var(--clr-white);
 }
 
