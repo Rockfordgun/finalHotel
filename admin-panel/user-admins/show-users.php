@@ -17,7 +17,6 @@ $allUsers = $users->fetchAll(PDO::FETCH_OBJ);
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title mb-4 d-inline">Users</h5>
-                    <a href="create-admins.php" class="btn btn-primary mb-4 text-center float-right">Create User</a>
                     <table class="table">
                         <thead>
                             <tr>

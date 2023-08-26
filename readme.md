@@ -4,10 +4,12 @@ Welcome to the **Hotel Booking System**, a web application that facilitates hote
 
 ## Getting Started
 
-1. Register your account on the website.
-2. Log in using your registered credentials.
-3. Browse available rooms, view details, and make reservations.
-4. For administrators, log in to the admin panel to manage users, hotels, rooms, and bookings.
+1. The DB Can be found in MainDB
+2. UI Planning is in the UI folder(Things changed as time got to me!)
+3. Register your account on the website.
+4. Log in using your registered credentials.
+5. Browse available rooms, view details, and make reservations.
+6. For administrators, log in to the admin panel to manage users, hotels, rooms, and bookings.
 
 ## PayPal Integration
 
